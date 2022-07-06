@@ -1,12 +1,8 @@
 # Serverless TrainTicket
 
-This is an open source microservice benchmark system developed by the CodeWisdom team of Fudan University according to the practice of microservices in the industry. It is a train booking system based on the microservice architecture, including 41 kinds of microservices. This project uses the open source function computing framework OpenFaaS, extracts and transforms the high-concurrency booking business of the open source microservice system TrainTicket based on the Serverless architecture, and deploys and runs it in the Kubernetes cluster. The main development technology frameworks used are as follows:
-- Java - OpenFaaS、OkHttp、*Spring Boot
-- DB - MongoDB、MongoBD JDBC
-
-## Create K8s cluster and install Openfaas
-
-
+This is an open source microservice benchmark system. It is a train booking system based on the microservice architecture, including 41 kinds of microservices. The main development technology frameworks used are as follows:
+- Java - OpenFaaS
+- DB - MongoDB
 
 ## Quick Start
 
@@ -28,6 +24,8 @@ docker login -u <username> -p <password>
 ````
 
 ### 2. Install OpenFaaS
+
+#### 2.1 Install OpenFaaS on GCP
 
 Create Kubernetes cluster on GCP
 ```shell
@@ -58,10 +56,38 @@ export OPENFAAS_PREFIX="[YOUR DOCKER REGISTRY URL]/[YOUR DOCKER REGISTRY USERRNA
 
 echo $PASSWORD | faas-cli login --password-stdin
 ```
+#### 2.2 Install OpenFaaS on minikube
+
+Create namespaces for OpenFaaS
+```shell
+kubectl apply -f https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml
+````
+
+Add the OpenFaaS helm repository
+```shell
+helm repo add openfaas https://openfaas.github.io/faas-netes/
+helm repo update
+````
+
+Install OpenFaaS using the chart
+```shell
+helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set basic_auth=false
+````
+
+Set the OPENFAAS_URL env-var
+```shell
+export OPENFAAS_URL=$(minikube ip):31112
+````
+
+Finally login using the CLI
+```shell
+faas-cli login -g http://$OPENFAAS_URL -u admin
+````
+
 
 ### 3. MASTER_ID & DOCKER_USERNAME variables required for deployment
 
-Inside the files part01_DataBaseDeployment.sh and part03_FaaSFunctions.sh
+Inside the files part01_DataBaseDeployment.sh and part02_FaaSFunctions.sh
 
 ```shell
 MASTER_ID=<OPENFAAS_URL>
