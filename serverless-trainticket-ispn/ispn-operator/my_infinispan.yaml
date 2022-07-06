@@ -1,0 +1,11 @@
+apiVersion: infinispan.org/v1
+kind: Infinispan
+metadata:
+  name: infinispan
+spec:
+  replicas: 4
+  service:
+    type: DataGrid
+  configMapName: "cluster-config"
+  security:
+    endpointAuthentication: false

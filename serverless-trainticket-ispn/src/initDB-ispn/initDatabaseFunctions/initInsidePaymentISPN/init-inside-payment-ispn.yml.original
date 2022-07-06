@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  init-inside-payment-ispn:
+    lang: java11
+    handler: ./init-inside-payment-ispn
+    image: tmsquare/init-inside-payment-ispn:latest
+
