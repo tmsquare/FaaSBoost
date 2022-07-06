@@ -17,15 +17,14 @@ Since this project chooses Kubernetes to build the OpenFaaS serverless platform,
 - Operating system: Various Linux distributions based on x86_64, including CentOS, Federa, Ubuntu, etc., but the kernel requires 3.10 and above.
 - Container runtime: Docker is generally used as the container runtime.
 
-### 1. Log in to Docker Hub
+
+### 1. Install OpenFaaS
 
 ```shell
+# Log in to Docker Hub
 docker login -u <username> -p <password>
 ````
-
-### 2. Install OpenFaaS
-
-#### 2.1 Install OpenFaaS on GCP
+#### 1.1 Install OpenFaaS on GCP
 
 Create Kubernetes cluster on GCP
 ```shell
@@ -56,7 +55,7 @@ export OPENFAAS_PREFIX="[YOUR DOCKER REGISTRY URL]/[YOUR DOCKER REGISTRY USERRNA
 
 echo $PASSWORD | faas-cli login --password-stdin
 ```
-#### 2.2 Install OpenFaaS on minikube
+#### 1.2 Install OpenFaaS on minikube
 
 Create namespaces for OpenFaaS
 ```shell
@@ -85,31 +84,30 @@ faas-cli login -g http://$OPENFAAS_URL -u admin
 ````
 
 
-### 3. MASTER_ID & DOCKER_USERNAME variables required for deployment
+### 2. Deploy the functions and DB
 
-Inside the files part01_DataBaseDeployment.sh and part02_FaaSFunctions.sh
+Modify `part01_DataBaseDeployment.sh` and `part02_FaaSFunctions.sh`
 
 ```shell
 MASTER_ID=<OPENFAAS_URL>
 DOCKER_USERNAME=<docker_username>
 ````
 
-### 5. Execute the database automatic deployment script file
-
+Deploy MongoDB on K8s
 ```shell
 chmod u+x part01_DataBaseDeployment.sh
 ./part01_DataBaseDeployment.sh
 ````
 
-Run `kubectl get pods` and `kubectl get pods -n openfaas-fn` and wait for all database initialization function Pods to be Ready, then run the following command
+Run `kubectl get pods` and `kubectl get pods -n openfaas-fn` (wait for all Pods to be Ready)
 
+Populate the database
 ```shell
-# Initialize data content
 chmod u+x part01_DataInitiation.sh
 ./part01_DataInitiation.sh
 ````
 
-### 6. Execute the backend automatic deployment script file
+Deploy all functions
 
 ```shell
 # BaaS service deployment
@@ -123,14 +121,4 @@ chmod u+x part02_FaaSFunctions.sh
 ./part02_FaaSFunctions.sh
 ````
 
-### 7. Execute the front-end automatic deployment script file
-
-```shell
-# Front-end deployment
-chmod u+x part03_Frontend.sh
-./part03_Frontend.sh
-````
-
-### 8. Run `kubectl get pods --all-namespaces` and wait for all Pods to be Ready
-
-### 9. Visit the Serverless TrainTicket home page http://[Node-IP]:32677
+### 3. Check `api_reference.txt` for function calls
