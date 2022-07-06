@@ -26,23 +26,23 @@ docker login -u <username> -p <password>
 ````
 #### 1.1 Install OpenFaaS on GCP
 
-Create Kubernetes cluster on GCP
+- Create Kubernetes cluster on GCP
 ```shell
 gcloud container clusters create mycluster --num-nodes=2 --machine-type=e2-standard-2 --zone europe-west1-b
 ````
 
-Install faas-cli
+- Install faas-cli
 ```shell
 curl -sL https://cli.openfaas.com | sudo sh # Linux
 brew install faas-cli # MacOS
 ````
 
-Get arkade MacOS / Linux:
+- Get arkade MacOS / Linux:
 ```shell
 curl -SLsf https://dl.get-arkade.dev/ | sudo sh
 ````
 
-Install the OpenFaaS chart using arkade
+- Install the OpenFaaS chart using arkade
 ```shell 
 arkade install openfaas --load-balancer
 PASSWORD=$(kubectl get secret -n openfaas basic-auth -o jsonpath="{.data.basic-auth-password}" | base64 --decode; echo)
@@ -57,28 +57,28 @@ echo $PASSWORD | faas-cli login --password-stdin
 ```
 #### 1.2 Install OpenFaaS on minikube
 
-Create namespaces for OpenFaaS
+- Create namespaces for OpenFaaS
 ```shell
 kubectl apply -f https://raw.githubusercontent.com/openfaas/faas-netes/master/namespaces.yml
 ````
 
-Add the OpenFaaS helm repository
+- Add the OpenFaaS helm repository
 ```shell
 helm repo add openfaas https://openfaas.github.io/faas-netes/
 helm repo update
 ````
 
-Install OpenFaaS using the chart
+- Install OpenFaaS using the chart
 ```shell
 helm upgrade openfaas --install openfaas/openfaas --namespace openfaas --set functionNamespace=openfaas-fn --set basic_auth=false
 ````
 
-Set the OPENFAAS_URL env-var
+- Set the OPENFAAS_URL env-var
 ```shell
 export OPENFAAS_URL=$(minikube ip):31112
 ````
 
-Finally login using the CLI
+- Finally login using the CLI
 ```shell
 faas-cli login -g http://$OPENFAAS_URL -u admin
 ````
@@ -86,28 +86,28 @@ faas-cli login -g http://$OPENFAAS_URL -u admin
 
 ### 2. Deploy the functions and DB
 
-Modify `part01_DataBaseDeployment.sh` and `part02_FaaSFunctions.sh`
+- Modify `part01_DataBaseDeployment.sh` and `part02_FaaSFunctions.sh`
 
 ```shell
 MASTER_ID=<OPENFAAS_URL>
 DOCKER_USERNAME=<docker_username>
 ````
 
-Deploy MongoDB on K8s
+- Deploy MongoDB on K8s
 ```shell
 chmod u+x part01_DataBaseDeployment.sh
 ./part01_DataBaseDeployment.sh
 ````
 
-Run `kubectl get pods` and `kubectl get pods -n openfaas-fn` (wait for all Pods to be Ready)
+- Run `kubectl get pods` and `kubectl get pods -n openfaas-fn` (wait for all Pods to be Ready)
 
-Populate the database
+- Populate the database
 ```shell
 chmod u+x part01_DataInitiation.sh
 ./part01_DataInitiation.sh
 ````
 
-Deploy all functions
+- Deploy all functions
 
 ```shell
 # BaaS service deployment
