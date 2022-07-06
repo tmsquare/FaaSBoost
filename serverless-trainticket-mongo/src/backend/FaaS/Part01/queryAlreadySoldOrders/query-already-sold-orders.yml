@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  query-already-sold-orders:
+    lang: java11
+    handler: ./query-already-sold-orders
+    image: tmsquare/query-already-sold-orders:latest
+

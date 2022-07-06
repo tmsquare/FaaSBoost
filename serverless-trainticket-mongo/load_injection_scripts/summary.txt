@@ -1,0 +1,8 @@
+# read request: curl  -L http://$host:31112/function/get-user-by-userid.openfaas-fn/accountId/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f
+
+nb_Req      Latency(no_db)/ms     Latency(db)/ms      db_connect_time (%)
+300         12.04              	  17.24               30.16
+400         13.04              	  17.87               27.02
+500         12.67              	  18.34               30.91
+1000        12.86              	  17.46               26.34
+2000        12.49              	  18.27               31.63

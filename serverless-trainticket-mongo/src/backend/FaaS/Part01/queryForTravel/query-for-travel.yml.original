@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  query-for-travel:
+    lang: java11
+    handler: ./query-for-travel
+    image: tmsquare/query-for-travel:latest
+

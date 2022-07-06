@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  get-left-trip-tickets:
+    lang: java11
+    handler: ./get-left-trip-tickets
+    image: tmsquare/get-left-trip-tickets:latest
+

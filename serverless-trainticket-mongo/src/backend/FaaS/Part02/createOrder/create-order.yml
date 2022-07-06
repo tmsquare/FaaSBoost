@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  create-order:
+    lang: java11
+    handler: ./create-order
+    image: tmsquare/create-order:latest
+

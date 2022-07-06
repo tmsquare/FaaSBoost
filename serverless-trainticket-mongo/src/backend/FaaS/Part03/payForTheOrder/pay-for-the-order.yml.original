@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  pay-for-the-order:
+    lang: java11
+    handler: ./pay-for-the-order
+    image: tmsquare/pay-for-the-order:latest
+
