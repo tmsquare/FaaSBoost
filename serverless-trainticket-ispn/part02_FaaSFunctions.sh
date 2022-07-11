@@ -1,7 +1,7 @@
 echo "Part02 FaaS Backend Deployment"
 
 cd src/backend/FaaS/
-#cd Part01/
+cd Part01/
 
 MASTER_ID=192.168.49.2
 DOCKER_USERNAME=tmsquare
@@ -40,15 +40,15 @@ PATH_TO_SRC=src/main/java/
 #cd ..
 #echo "FINISHED 3/13"
 #
-#cd getRouteByRouteId/
-#sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-route-by-routeid.yml
-#sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-route-by-routeid.yml
-#cp -R ../../entities/* ./get-route-by-routeid/$PATH_TO_SRC
-#faas-cli up -f get-route-by-routeid.yml
-#rm -r ./get-route-by-routeid/$PATH_TO_SRC/entities
-#rm -r ./get-route-by-routeid/$PATH_TO_SRC/edu
-#cd ..
-#echo "FINISHED 4/13"
+cd getRouteByRouteId/
+sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-route-by-routeid.yml
+sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-route-by-routeid.yml
+cp -R ../../entities/* ./get-route-by-routeid/$PATH_TO_SRC
+faas-cli up -f get-route-by-routeid.yml
+rm -r ./get-route-by-routeid/$PATH_TO_SRC/entities
+rm -r ./get-route-by-routeid/$PATH_TO_SRC/edu
+cd ..
+echo "FINISHED 4/13"
 #
 #cd getRouteByTripId/
 #sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-route-by-tripid.yml
@@ -144,7 +144,7 @@ PATH_TO_SRC=src/main/java/
 #echo "Part1 function deployment finish"
 #
 #echo "Part2 function deployment start"
-#cd ..
+cd ..
 cd Part02/
 
 #cd checkSecurity/
