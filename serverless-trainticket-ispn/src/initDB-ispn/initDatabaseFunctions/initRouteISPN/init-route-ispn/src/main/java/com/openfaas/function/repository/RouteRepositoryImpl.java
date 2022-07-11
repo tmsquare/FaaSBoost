@@ -105,7 +105,7 @@ public class RouteRepositoryImpl implements RouteRepository {
             info10.setStationList("shanghai,suzhou");
             info10.setDistanceList("0,50");
 
-            RemoteCache<UUID, RouteInfo> cache = cacheManager.getCache("price-ispn");
+            RemoteCache<UUID, RouteInfo> cache = cacheManager.getCache("route-ispn");
 
             cache.put(UUID.fromString("0b23bd3e-876a-4af3-b920-c50a90c90b04"), info1);
             cache.put(UUID.fromString("9fc9c261-3263-4bfa-82f8-bb44e06b2f52"), info2);
