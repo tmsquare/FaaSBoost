@@ -207,15 +207,15 @@ cd Part02/
 #cd ..
 #echo "FINISHED 6/10"
 #
-#cd getContactsByContactsId/
-#sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-contacts-by-contactsid.yml
-#sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-contacts-by-contactsid.yml
-#cp -R ../../entities/* ./get-contacts-by-contactsid/$PATH_TO_SRC
-#faas-cli up -f get-contacts-by-contactsid.yml
-#rm -r ./get-contacts-by-contactsid/$PATH_TO_SRC/entities
-#rm -r ./get-contacts-by-contactsid/$PATH_TO_SRC/edu
-#cd ..
-#echo "FINISHED 7/10"
+cd getContactsByContactsId/
+sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-contacts-by-contactsid.yml
+sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-contacts-by-contactsid.yml
+cp -R ../../entities/* ./get-contacts-by-contactsid/$PATH_TO_SRC
+faas-cli up -f get-contacts-by-contactsid.yml
+rm -r ./get-contacts-by-contactsid/$PATH_TO_SRC/entities
+rm -r ./get-contacts-by-contactsid/$PATH_TO_SRC/edu
+cd ..
+echo "FINISHED 7/10"
 #
 #cd getTripAllDetailInfo/
 #sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-trip-all-detai-info.yml
@@ -250,8 +250,8 @@ cd ..
 #echo "Part2 function deployment finish"
 #
 #echo "Part3 function deployment start"
-#cd ..
-#cd Part03/
+cd ..
+cd Part03/
 #
 #cd calculateRefund/
 #sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ calculate-refund.yml
@@ -293,15 +293,15 @@ cd ..
 #cd ..
 #echo "FINISHED 4/10"
 #
-#cd getOrderById/
-#sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-order-by-id.yml
-#sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-order-by-id.yml
-#cp -R ../../entities/* ./get-order-by-id/$PATH_TO_SRC
-#faas-cli up -f get-order-by-id.yml
-#rm -r ./get-order-by-id/$PATH_TO_SRC/entities
-#rm -r ./get-order-by-id/$PATH_TO_SRC/edu
-#cd ..
-#echo "FINISHED 5/10"
+cd getOrderById/
+sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-order-by-id.yml
+sed -i'.original' -e s/tmsquare/$DOCKER_USERNAME/ get-order-by-id.yml
+cp -R ../../entities/* ./get-order-by-id/$PATH_TO_SRC
+faas-cli up -f get-order-by-id.yml
+rm -r ./get-order-by-id/$PATH_TO_SRC/entities
+rm -r ./get-order-by-id/$PATH_TO_SRC/edu
+cd ..
+echo "FINISHED 5/10"
 #
 #cd getStationIdListByNameList/
 #sed -i'.original' -e s/127.0.0.1/$MASTER_ID/ get-stationid-list-by-name-list.yml

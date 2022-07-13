@@ -9,19 +9,19 @@ import org.infinispan.protostream.annotations.ProtoField;
 public class Route {
 
     @ProtoField(number = 1)
-    public String id;
+    private String id;
 
     @ProtoField(number = 2)
-    public List<String> stations;
+    private List<String> stations;
 
     @ProtoField(number = 3)
-    public List<Integer> distances;
+    private List<Integer> distances;
 
     @ProtoField(number = 4)
-    public String startStationId;
+    private String startStationId;
 
     @ProtoField(number = 5)
-    public String terminalStationId;
+    private String terminalStationId;
 
     public Route() {
         //Default Constructor

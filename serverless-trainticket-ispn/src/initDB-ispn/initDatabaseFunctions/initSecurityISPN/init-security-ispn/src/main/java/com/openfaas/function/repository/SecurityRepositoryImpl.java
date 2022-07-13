@@ -17,7 +17,7 @@ public class SecurityRepositoryImpl implements SecurityRepository {
 
         ConfigurationBuilder builder = new ConfigurationBuilder();
         builder.addServer()
-                .host("10.110.72.158")
+                .host("10.97.152.242")
                 .port(ConfigurationProperties.DEFAULT_HOTROD_PORT);
 
         LibraryInitializer initializer = new LibraryInitializerImpl();

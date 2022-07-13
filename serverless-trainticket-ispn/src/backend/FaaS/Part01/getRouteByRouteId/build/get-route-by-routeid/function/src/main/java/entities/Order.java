@@ -1,60 +1,51 @@
 package entities;
 
+import org.infinispan.protostream.annotations.ProtoFactory;
+import org.infinispan.protostream.annotations.ProtoField;
 
 import java.util.Date;
 import java.util.UUID;
 
-import org.infinispan.protostream.annotations.ProtoFactory;
-import org.infinispan.protostream.annotations.ProtoField;
-
 public class Order {
 
-    @ProtoField(number = 1)
     private UUID id;
 
-    @ProtoField(number = 2)
     private Date boughtDate;
 
-    @ProtoField(number = 3)
+
     private Date travelDate;
 
-    @ProtoField(number = 4)
+
     private Date travelTime;
 
-    @ProtoField(number = 5)
+    /**
+     * Which Account Bought it
+     */
     private UUID accountId;
 
-    @ProtoField(number = 6)
+    /**
+     * Tickets bought for whom....
+     */
     private String contactsName;
 
-    @ProtoField(number = 7, required=true)
     private int documentType;
 
-    @ProtoField(number = 8)
     private String contactsDocumentNumber;
 
-    @ProtoField(number = 9)
     private String trainNumber;
 
-    @ProtoField(number = 10, required=true)
     private int coachNumber;
 
-    @ProtoField(number = 11, required=true)
     private int seatClass;
 
-    @ProtoField(number = 12)
     private String seatNumber;
 
-    @ProtoField(number = 13)
     private String from;
 
-    @ProtoField(number = 14)
     private String to;
 
-    @ProtoField(number = 15, required=true)
     private int status;
 
-    @ProtoField(number = 16)
     private String price;
 
 
@@ -107,6 +98,7 @@ public class Order {
         return result;
     }
 
+    @ProtoField(number = 1)
     public UUID getId() {
         return id;
     }
@@ -115,6 +107,7 @@ public class Order {
         this.id = id;
     }
 
+    @ProtoField(number = 2)
     public UUID getAccountId() {
         return accountId;
     }
@@ -123,6 +116,7 @@ public class Order {
         this.accountId = accountId;
     }
 
+    @ProtoField(number = 3)
     public Date getBoughtDate() {
         return boughtDate;
     }
@@ -131,6 +125,7 @@ public class Order {
         this.boughtDate = boughtDate;
     }
 
+    @ProtoField(number = 4)
     public Date getTravelDate() {
         return travelDate;
     }
@@ -144,6 +139,7 @@ public class Order {
         this.travelDate = date;
     }
 
+    @ProtoField(number = 5)
     public Date getTravelTime() {
         return travelTime;
     }
@@ -152,7 +148,7 @@ public class Order {
         this.travelTime = travelTime;
     }
 
-
+    @ProtoField(number = 6)
     public String getTrainNumber() {
         return trainNumber;
     }
@@ -161,6 +157,7 @@ public class Order {
         this.trainNumber = trainNumber;
     }
 
+    @ProtoField(number = 7, required=true)
     public int getCoachNumber() {
         return coachNumber;
     }
@@ -169,6 +166,7 @@ public class Order {
         this.coachNumber = coachNumber;
     }
 
+    @ProtoField(number = 8, required=true)
     public int getSeatClass() {
         return seatClass;
     }
@@ -177,6 +175,7 @@ public class Order {
         this.seatClass = seatClass;
     }
 
+    @ProtoField(number = 9)
     public String getSeatNumber() {
         return seatNumber;
     }
@@ -185,6 +184,7 @@ public class Order {
         this.seatNumber = seatNumber;
     }
 
+    @ProtoField(number = 10)
     public String getFrom() {
         return from;
     }
@@ -193,6 +193,7 @@ public class Order {
         this.from = from;
     }
 
+    @ProtoField(number = 11)
     public String getTo() {
         return to;
     }
@@ -201,6 +202,7 @@ public class Order {
         this.to = to;
     }
 
+    @ProtoField(number = 13, required=true)
     public int getStatus() {
         return status;
     }
@@ -209,6 +211,7 @@ public class Order {
         this.status = status;
     }
 
+    @ProtoField(number = 14)
     public String getPrice() {
         return price;
     }
@@ -217,6 +220,7 @@ public class Order {
         this.price = price;
     }
 
+    @ProtoField(number = 15)
     public String getContactsName() {
         return contactsName;
     }
@@ -225,6 +229,7 @@ public class Order {
         this.contactsName = contactsName;
     }
 
+    @ProtoField(number = 16, required=true)
     public int getDocumentType() {
         return documentType;
     }
@@ -233,6 +238,7 @@ public class Order {
         this.documentType = documentType;
     }
 
+    @ProtoField(number = 17)
     public String getContactsDocumentNumber() {
         return contactsDocumentNumber;
     }

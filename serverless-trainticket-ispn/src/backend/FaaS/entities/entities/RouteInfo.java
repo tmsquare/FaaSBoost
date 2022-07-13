@@ -6,19 +6,19 @@ import org.infinispan.protostream.annotations.ProtoField;
 
 public class RouteInfo {
     @ProtoField(number = 1)
-    private String id;
+    public String id;
 
     @ProtoField(number = 2)
-    private String startStation;
+    public String startStation;
 
     @ProtoField(number = 3)
-    private String endStation;
+    public String endStation;
 
     @ProtoField(number = 4)
-    private String stationList;
+    public String stationList;
 
     @ProtoField(number = 5)
-    private String distanceList;
+    public String distanceList;
 
     public RouteInfo() {
         //Default Constructor
