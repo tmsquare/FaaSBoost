@@ -1,0 +1,11 @@
+apiVersion: infinispan.org/v1
+kind: Infinispan
+metadata:
+  name: infinispan-volatile
+spec:
+  replicas: 4
+  service:
+    type: Cache
+  configMapName: "cluster-config-volatile"
+  security:
+    endpointAuthentication: false

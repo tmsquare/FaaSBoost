@@ -1,0 +1,12 @@
+MASTER_ID=192.168.49.2
+
+http://$MASTER_ID:31112/function/create-new-contacts/ -d { arg1:"", arg2:"" } # getBody Contacts.class
+# Ex: curl -L http://$MASTER_ID:31112/function/create-new-contacts -d {\"id\": \"4d2a46c7-71cb-4cf1-b5bb-b68406d9da67\", \"accountId\": \"9e0b2927-67fa-4bd1-8198-cdad5c762289\", \"name\": \"Contacts_One\", \"documentType\": \"1\", \"documentNumber\": \"DocumentNumber_One\", \"phoneNumber\": \"ContactsPhoneNum_One\"}
+
+http://$MASTER_ID:31112/function/get-user-by-userid/accountId/${accountId}
+# Ex: curl -L http://$MASTER_ID:31112/function/get-user-by-userid/accountId/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f
+# Ex: curl -L http://$MASTER_ID:31112/function/get-user-by-userid-no-db/accountId/4d2a46c7-71cb-4cf1-b5bb-b68406d9da6f
+
+
+
+

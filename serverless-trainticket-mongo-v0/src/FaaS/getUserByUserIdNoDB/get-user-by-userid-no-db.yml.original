@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  get-user-by-userid-no-db:
+    lang: java11
+    handler: ./get-user-by-userid-no-db
+    image: tmsquare/get-user-by-userid-no-db:latest
+

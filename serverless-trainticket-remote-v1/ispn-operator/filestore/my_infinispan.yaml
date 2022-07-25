@@ -1,0 +1,11 @@
+apiVersion: infinispan.org/v1
+kind: Infinispan
+metadata:
+  name: infinispan-filestore
+spec:
+  replicas: 4
+  service:
+    type: DataGrid
+  configMapName: "cluster-config-filestore"
+  security:
+    endpointAuthentication: false

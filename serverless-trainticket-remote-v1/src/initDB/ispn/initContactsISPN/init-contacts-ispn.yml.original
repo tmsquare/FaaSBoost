@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://192.168.49.2:31112
+functions:
+  init-contacts-ispn:
+    lang: java11
+    handler: ./init-contacts-ispn
+    image: tmsquare/init-contacts-ispn:latest
+
