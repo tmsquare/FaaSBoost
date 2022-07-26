@@ -86,7 +86,7 @@ faas-cli login -g http://$OPENFAAS_URL -u admin
 
 ### 2. Deploy the functions and DB
 
-- Modify `part01_DataBaseDeployment-ispn.sh`, `part01_DataBaseDeployment-jnvm.sh` and `part02_FaaSFunctions.sh`
+- Modify `part01_DataBaseDeployment-ispn.sh` and `part02_FaaSFunctions.sh`
 
 ```shell
 MASTER_ID=<OPENFAAS_URL>
@@ -97,18 +97,16 @@ DOCKER_USERNAME=<docker_username>
 
 - Create ISPN cluster on K8s
 ```shell
-chmod u+x part01_DataBaseDeployment-ispn.sh part01_DataBaseDeployment-jnvm.sh
+chmod u+x part01_DataBaseDeployment-ispn.sh
 ./part01_DataBaseDeployment-ispn.sh
-./part01_DataBaseDeployment-jnvm.sh
 ````
 
 - Run `kubectl get pods` and `kubectl get pods -n openfaas-fn` (wait for all Pods to be Ready)
 
 - Populate the database
 ```shell
-chmod u+x part01_DataInitiation-ispn.sh part01_DataInitiation-jnvm.sh
+chmod u+x part01_DataInitiation-ispn.sh
 ./part01_DataInitiation-ispn.sh
-./part01_DataInitiation-jnvm.sh
 ````
 
 - Deploy all functions
