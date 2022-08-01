@@ -1,0 +1,7 @@
+org/example/service/ContactsServiceImpl.class
+org/example/service/ContactsService.class
+org/example/entity/DocumentType.class
+org/example/createNewContactsTask.class
+org/example/entity/Contacts.class
+org/example/repository/ContactsRepositoryImpl.class
+org/example/repository/ContactsRepository.class
