@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" generated="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.infinispan.protostream:protostream-processor:4.4.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.annotation:javax.annotation-api:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan.protostream:protostream:4.4.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan:infinispan-core:13.0.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan:infinispan-commons:13.0.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan.protostream:protostream-types:4.4.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jgroups:jgroups:4.2.18.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ben-manes.caffeine:caffeine:2.8.4" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:1.3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.threads:jboss-threads:2.3.3.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.common:wildfly-common:1.3.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan:infinispan-client-hotrod:13.0.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-digest:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-auth-server:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-auth:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-base:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-permission:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-x500:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-credential:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-keystore:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-x500-cert:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-x500-cert-util:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.sshd:sshd-common:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.26" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-provider-util:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-mechanism:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-http:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-digest:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-ssl:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-util:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-external:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-gs2:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-asn1:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-gssapi:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-security-manager-action:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-gssapi:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-oauth2:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-oauth2:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-plain:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-sasl-scram:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-mechanism-scram:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.wildfly.security:wildfly-elytron-password-impl:1.17.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-buffer:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-tcnative-classes:2.0.46.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.reactivex.rxjava3:rxjava:3.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-epoll:linux-x86_64:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-native-unix-common:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-transport-classes-epoll:4.1.72.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.infinispan:infinispan-tasks-api:13.0.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.1" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.1" level="project" />
+  </component>
+</module>

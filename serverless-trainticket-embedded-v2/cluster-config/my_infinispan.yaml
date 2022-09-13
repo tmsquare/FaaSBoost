@@ -1,0 +1,13 @@
+apiVersion: infinispan.org/v1
+kind: Infinispan
+metadata:
+  name: infinispan-volatile
+spec:
+  replicas: 1
+  dependencies:
+    volumeClaimName: ispn-tasks
+  service:
+    type: Cache
+  configMapName: "cluster-config-volatile"
+  security:
+    endpointAuthentication: false

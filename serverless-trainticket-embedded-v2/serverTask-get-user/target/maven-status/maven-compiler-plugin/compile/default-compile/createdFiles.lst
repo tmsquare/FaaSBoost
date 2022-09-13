@@ -1,0 +1,13 @@
+org/example/repository/UserRepository.class
+org/example/repository/UserRepositoryImpl.class
+org/example/getUserTask.class
+org/example/entity/UUIDAdapter$___Marshaller_203edc8e77ccf106f83b5234cbb8398132e1012e6f01a3681fded33a7abdc390.class
+org/example/service/UserServiceImpl.class
+org/example/entity/User$___Marshaller_dbc093248f5ff5d62a7bf0297f32ebeb402aa3f989ed7b7c86a168c3d3bc458b.class
+org/example/entity/User.class
+META-INF/services/org.infinispan.protostream.SerializationContextInitializer
+proto/user.proto
+org/example/repository/LibraryInitializerImpl.class
+org/example/entity/UUIDAdapter.class
+org/example/repository/LibraryInitializer.class
+org/example/service/UserService.class

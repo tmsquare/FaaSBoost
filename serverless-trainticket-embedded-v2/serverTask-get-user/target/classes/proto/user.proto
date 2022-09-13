@@ -1,0 +1,31 @@
+// File name: user.proto
+// Generated from : org.example.repository.LibraryInitializer
+
+syntax = "proto2";
+
+package user_proto;
+
+
+
+message User {
+   
+   optional UUID userId = 1;
+   
+   optional string userName = 2;
+   
+   optional string password = 3;
+   
+   required int32 gender = 4;
+   
+   required int32 documentType = 5;
+   
+   optional string documentNum = 6;
+   
+   optional string email = 7;
+}
+
+
+message UUID {
+   
+   optional string stringUUID = 1;
+}
